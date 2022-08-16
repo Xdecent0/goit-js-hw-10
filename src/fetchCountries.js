@@ -1,3 +1,3 @@
-const fetchCountries = name => {};
-
-export { square, diag };
+export const fetchCountries = name => {
+  console.log(name);
+};
