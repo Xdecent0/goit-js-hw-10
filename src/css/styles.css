@@ -16,3 +16,22 @@ body {
   font-size: 15px;
 }
 
+ul {
+  list-style: none;
+}
+
+.country-list__item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.country-list__flag {
+  margin-right: 20px;
+}
+
+.country-info__list {
+  margin-left: 10px;
+  font-size: 20px;
+}
