@@ -1,7 +1,7 @@
 const DATA_URL = 'https://restcountries.com/v3.1/name/';
 const FIELDS = `fields=name,capital,population,flags,languages`;
 
-export function fetchCountries(name) {
+export default function fetchCountries(name) {
   return fetch(`${DATA_URL}${name}?${FIELDS}`)
     .then(response => {
       if (!response.ok) {

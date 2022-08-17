@@ -1,7 +1,7 @@
 import './css/styles.css';
 import Notiflix from 'notiflix';
 import debounce from 'lodash.debounce';
-import { fetchCountries } from './fetchCountries.js';
+import fetchCountries from './fetchCountries.js';
 
 const countryDiv = document.querySelector('.country-info');
 const countryList = document.querySelector('.country-list');
@@ -45,7 +45,7 @@ function onCountryInput() {
     .catch(wrongName);
 
   function createMarkupList(countries) {
-    const markupList = countries
+    return countries
       .map(({ name, flags }) => {
         return `
           <li class="country-list__item">
@@ -55,11 +55,10 @@ function onCountryInput() {
           `;
       })
       .join('');
-    return markupList;
   }
 
   function renderCountryInfo(countries) {
-    const markupInfo = countries
+    return countries
       .map(({ capital, population, languages }) => {
         return `
         <ul class="country-info__list">
@@ -72,7 +71,6 @@ function onCountryInput() {
         `;
       })
       .join('');
-    return markupInfo;
   }
 
   function wrongName() {
